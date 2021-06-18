@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfinaladoo.controladores.FXMLAdmVentasController">
+   <children>
+      <StackedBarChart fx:id="ventasChart" layoutX="150.0" layoutY="85.0" title="Ventas">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <JFXButton fx:id="btnVolver" layoutX="327.0" layoutY="504.0" onAction="#cerrar" prefHeight="34.0" prefWidth="146.0" text="Volver" />
+   </children>
+</AnchorPane>

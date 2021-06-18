@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="642.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfinaladoo.controladores.FXMLAdmInventarioController">
+   <children>
+      <Text layoutX="321.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVENTARIO" wrappingWidth="303.4800567626953">
+         <font>
+            <Font name="Berlin Sans FB" size="52.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Text>
+      <TableView fx:id="tableProd" layoutX="29.0" layoutY="140.0" prefHeight="386.0" prefWidth="819.0">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
+            <TableColumn fx:id="colDisponible" prefWidth="75.0" text="Disponiblididad" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btnActualizar" buttonType="RAISED" layoutX="690.0" layoutY="86.0" onAction="#refreshTable" prefHeight="45.0" prefWidth="153.0" text="Actualizar">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnNuevoProd" buttonType="RAISED" layoutX="610.0" layoutY="536.0" onAction="#nuevoProd" prefHeight="61.0" prefWidth="160.0" text="Nuevo Producto" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnProducto" buttonType="RAISED" layoutX="393.0" layoutY="541.0" onAction="#eliminarProd" prefHeight="61.0" prefWidth="160.0" text="Eliminar Producto" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnModificar" buttonType="RAISED" layoutX="185.0" layoutY="541.0" onAction="#modificar" prefHeight="61.0" prefWidth="160.0" text="Modificar Prodcuto" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnVolver" buttonType="RAISED" layoutX="29.0" layoutY="567.0" onAction="#cerrar" prefHeight="36.0" prefWidth="120.0" text="Volver" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="comboTipo" layoutX="36.0" layoutY="95.0" onAction="#obtenerTipos" prefHeight="26.0" prefWidth="144.0" promptText="Tipo" />
+      <TextField fx:id="txtTipo" layoutX="265.0" layoutY="97.0" promptText="nombre tipo" />
+      <JFXButton fx:id="btnAddTipo" buttonType="RAISED" layoutX="457.0" layoutY="96.0" onAction="#nuevoTipo" prefHeight="26.0" prefWidth="95.0" text="Nuevo Tipo" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
